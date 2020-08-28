@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <UserSecretsId>669a0f98-c90b-495f-b23e-2678067c5b85</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="7.1.12" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureKeyVault.HostingStartup" Version="2.0.4" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
